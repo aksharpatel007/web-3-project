@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Nexus | Arbitrum & L2 Scaling</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="glass interactive">
+        <div class="logo">
+            <i class="fa-brands fa-ethereum"></i> Web3<span class="neon-text-blue">Nexus</span>
+        </div>
+        <ul class="nav-links">
+            <li><button class="nav-btn active interactive" onclick="navTo('home')">Home</button></li>
+            <li><button class="nav-btn interactive" onclick="navTo('concepts')">Concepts</button></li>
+            <li><button class="nav-btn interactive" onclick="navTo('prices')">Markets</button></li>
+            <li><button class="nav-btn interactive" onclick="navTo('simulator')">Simulator</button></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE 1: HOME -->
+    <main id="home" class="active-page">
+        <section class="hero">
+            <h1><span class="neon-text-blue">Arbitrum</span> & The Layer 2 Revolution</h1>
+            <p>Experience Ethereum scaling at its finest. Lower fees, faster transactions, and uncompromising security
+                inherited straight from the mainnet.</p>
+            <button class="btn-glow interactive" onclick="navTo('concepts')">Explore Concepts <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </section>
+
+        <section class="features-grid">
+            <div class="glass feature-card tilt-element interactive">
+                <i class="fa-solid fa-link-slash"></i>
+                <h3>The L1 Problem</h3>
+                <p>Ethereum mainnet (L1) processes ~15 TPS. High demand causes network congestion, resulting in massive
+                    gas fees and slow transaction times for regular users.</p>
+            </div>
+            <div class="glass feature-card tilt-element interactive">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Enter Arbitrum</h3>
+                <p>Arbitrum is an Optimistic Rollup. It executes transactions off-chain in batches, then posts the
+                    compressed data to L1, slashing fees while maintaining Ethereum's security.</p>
+            </div>
+            <div class="glass feature-card tilt-element interactive">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Real-World Benefit</h3>
+                <p>A simple swap on Uniswap L1 might cost $20-$50 in gas. The exact same smart contract swap on Arbitrum
+                    costs mere cents and settles instantly.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGE 2: CONCEPTS -->
+    <main id="concepts">
+        <div class="page-header">
+            <h2>Core <span class="neon-text-purple">Web3</span> Concepts</h2>
+            <p>Hover over the cards to reveal the foundational mechanics of decentralized systems.</p>
+        </div>
+
+        <div class="concepts-grid">
+            <!-- Card 1 -->
+            <div class="flip-card interactive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-globe"></i>
+                        <h3>Web2 vs Web3</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h4>The Evolution of the Net</h4>
+                        <p><strong>Web2:</strong> Read-Write. Centralized platforms (Google, Meta) own your data and
+                            monetize it. Servers are central.</p>
+                        <br>
+                        <p><strong>Web3:</strong> Read-Write-Own. Decentralized networks built on blockchains. You own
+                            your data via cryptography and interact trustlessly.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flip-card interactive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-brands fa-bitcoin"></i>
+                        <h3>ETH vs BTC</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h4>Digital Gold vs World Computer</h4>
+                        <p><strong>Bitcoin:</strong> A decentralized ledger designed primarily as a store of value and
+                            digital money. Simple scripting.</p>
+                        <br>
+                        <p><strong>Ethereum:</strong> A Turing-complete platform. It processes programmable smart
+                            contracts, enabling DeFi, NFTs, and complex dApps.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flip-card interactive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-key"></i>
+                        <h3>Public vs Private Key</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h4>Cryptography 101</h4>
+                        <p><strong>Public Key:</strong> Your bank account number. Safe to share. Used by others to send
+                            you funds or verify your signature.</p>
+                        <br>
+                        <p><strong>Private Key:</strong> Your ATM PIN / Password. NEVER share this. It grants full
+                            mathematical control over the assets on the public key.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="flip-card interactive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Blockchain vs DB</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h4>Ledgers vs Tables</h4>
+                        <p><strong>Traditional DB:</strong> CRUD (Create, Read, Update, Delete). Controlled by admins.
+                            Fast, but requires trust in the operator.</p>
+                        <br>
+                        <p><strong>Blockchain:</strong> Append-only. Immutable. Verified by a decentralized network of
+                            nodes. Slower, but requires zero trust.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PAGE 3: LIVE PRICES -->
+    <main id="prices">
+        <div class="page-header">
+            <h2>Live <span class="neon-text-blue">Crypto</span> Markets</h2>
+            <p>Real-time data fetched directly via CoinGecko API through our backend server.</p>
+        </div>
+
+        <div class="dashboard-controls">
+            <div class="market-controls">
+                <label class="market-search-wrap" for="marketSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="marketSearch" type="search" placeholder="Search coin, symbol, or category">
+                </label>
+                <select id="marketFilter" class="market-select interactive" aria-label="Filter markets by category">
+                    <option value="all">All categories</option>
+                    <option value="L2">L2</option>
+                    <option value="L1">L1</option>
+                    <option value="L0">L0</option>
+                    <option value="DEX">DEX</option>
+                    <option value="Lending">Lending</option>
+                    <option value="Oracle">Oracle</option>
+                    <option value="Staking">Staking</option>
+                    <option value="Stablecoin">Stablecoin</option>
+                    <option value="Meme">Meme</option>
+                    <option value="Modular">Modular</option>
+                    <option value="AI">AI</option>
+                    <option value="AI/DePIN">AI/DePIN</option>
+                </select>
+            </div>
+            <button class="refresh-btn interactive" onclick="fetchPrices()" id="refreshBtn">
+                <i class="fa-solid fa-rotate-right" id="refreshIcon"></i> Refresh Data
+            </button>
+        </div>
+
+        <div class="market-summary" id="marketSummary">
+            <div class="summary-card glass">
+                <span class="summary-label">Tracked Assets</span>
+                <strong class="summary-value" id="trackedCount">0</strong>
+                <span class="summary-meta">Live coins mapped in this view</span>
+            </div>
+            <div class="summary-card glass">
+                <span class="summary-label">Visible Now</span>
+                <strong class="summary-value" id="visibleCount">0</strong>
+                <span class="summary-meta" id="visibleHint">Use search or filters to narrow results</span>
+            </div>
+            <div class="summary-card glass">
+                <span class="summary-label">Top Gainer</span>
+                <strong class="summary-value" id="topGainer">--</strong>
+                <span class="summary-meta" id="topGainerMeta">Waiting for market data</span>
+            </div>
+            <div class="summary-card glass">
+                <span class="summary-label">Top Loser</span>
+                <strong class="summary-value" id="topLoser">--</strong>
+                <span class="summary-meta" id="topLoserMeta">Waiting for market data</span>
+            </div>
+        </div>
+
+        <div class="prices-grid" id="priceGrid">
+            <!-- Cards injected via JS -->
+            <div style="text-align:center; grid-column: 1/-1;">Loading market data...</div>
+        </div>
+    </main>
+
+    <!-- PAGE 4: BLOCK SIMULATOR -->
+    <main id="simulator">
+        <div class="page-header">
+            <h2>Proof of Work <span class="neon-text-purple">Simulator</span></h2>
+            <p>Mine Block 1 to find a hash starting with "00". Watch what happens to Block 2 if you alter Block 1's data
+                post-mining.</p>
+        </div>
+
+        <div class="simulator-toolbar">
+            <div class="simulator-status">
+                <span class="status-dot" id="chainStatusDot"></span>
+                <span id="chainStatusText">Chain intact</span>
+            </div>
+            <div class="simulator-actions">
+                <button class="refresh-btn interactive" onclick="resetSimulator()" id="resetChainBtn">
+                    <i class="fa-solid fa-rotate-left"></i> Reset Chain
+                </button>
+                <button class="refresh-btn interactive" onclick="copyBlockHash()" id="copyHashBtn">
+                    <i class="fa-solid fa-copy"></i> Copy Hash
+                </button>
+            </div>
+        </div>
+
+        <div class="simulator-container" id="simContainer">
+            <div class="broken-alert"><i class="fa-solid fa-triangle-exclamation"></i> CHAIN BROKEN! Immutability
+                Compromised!</div>
+
+            <!-- Block 1 -->
+            <div class="glass block-node">
+                <div class="block-header">
+                    <h3><i class="fa-solid fa-cube"></i> Block #1 (Genesis)</h3>
+                    <button class="btn-glow interactive" onclick="mineBlock(1)" id="mineBtn1">Mine Block</button>
+                </div>
+                <div class="input-group">
+                    <label>Block Data (Txns)</label>
+                    <textarea id="data1" rows="3" class="interactive"
+                        oninput="updateHash(1)">Alice sends 5 ETH to Bob</textarea>
+                </div>
+                <div class="input-group">
+                    <label>Previous Hash</label>
+                    <input type="text" id="prevHash1"
+                        value="0000000000000000000000000000000000000000000000000000000000000000" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Nonce (Mining iteration)</label>
+                    <input type="number" id="nonce1" value="0" readonly>
+                </div>
+                <label style="color:var(--text-muted); font-size: 0.85rem; margin-bottom:5px; display:block;">Current
+                    SHA-256 Hash</label>
+                <div class="hash-display" id="hash1">Calculating...</div>
+            </div>
+
+            <div class="connection-line"></div>
+
+            <!-- Block 2 -->
+            <div class="glass block-node">
+                <div class="block-header">
+                    <h3><i class="fa-solid fa-cube"></i> Block #2</h3>
+                    <span style="font-size: 0.8rem; color:var(--text-muted);">Awaiting valid Block 1</span>
+                </div>
+                <div class="input-group">
+                    <label>Block Data</label>
+                    <textarea id="data2" rows="2" readonly>Bob sends 2 ETH to Charlie</textarea>
+                </div>
+                <div class="input-group">
+                    <label>Previous Hash (Linked to Block 1)</label>
+                    <input type="text" id="prevHash2" readonly>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>Full-Stack Web3 Application | Built with Node.js, Express, HTML, CSS, and Vanilla JS</p>
+            <p>
+                <strong>Backend:</strong> Express Server with CoinGecko API Integration & SHA-256 Hashing |
+                <strong>Frontend:</strong> Modular JavaScript Architecture
+            </p>
+        </div>
+    </footer>
+
+    <!-- Initialize Application -->
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
