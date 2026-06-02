@@ -1,4 +1,4 @@
-# Web3 Nexus - Full-Stack Application
+# Web3 Nexus - Static Web Application
 
 A modern, full-stack Web3 educational platform featuring Arbitrum/L2 scaling, live crypto prices, and an interactive blockchain simulator.
 
